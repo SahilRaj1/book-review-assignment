@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "npx tsc",
-    "start": "node dist/src/index.js",
-    "dev": "nodemon src/index.ts"
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts",
+    "swagger": "ts-node src/utils/swagger-output.ts"
   },
   "repository": {
     "type": "git",
@@ -34,7 +35,9 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.15.1",
     "mongoose-aggregate-paginate-v2": "^1.1.4",
-    "multer": "^2.0.0"
+    "multer": "^2.0.0",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
@@ -43,9 +46,9 @@
     "@types/express": "^5.0.2",
     "@types/jsonwebtoken": "^9.0.9",
     "@types/mongoose": "^5.11.96",
-    "@types/mongoose-aggregate-paginate-v2": "^1.0.12",
     "@types/multer": "^1.4.12",
     "@types/node": "^22.15.24",
+    "@types/swagger-ui-express": "^4.1.8",
     "nodemon": "^3.1.10",
     "prettier": "^3.5.3",
     "ts-node": "^10.9.2",

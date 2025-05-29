@@ -143,7 +143,7 @@ export const deleteReview = asyncHandler(
     }
 
     const bookId = review.book;
-    await review.remove();
+    await review.deleteOne();
 
     const aggregatePipeline : PipelineStage[] = [
       { $match: { book: bookId } },

@@ -83,7 +83,7 @@ export const addBook = asyncHandler(
 
 export const getBookById = asyncHandler(
     async (req: Request, res: Response) => {
-        const { bookId } = req.params;
+        const { id: bookId } = req.params;
         const page = parseInt(req.query.page as string) || 1;
         const limit = parseInt(req.query.limit as string) || 5;
 
@@ -115,7 +115,7 @@ export const getBookById = asyncHandler(
         const noOfReviews = ratingStats[0]?.noOfReviews || 0;
 
         const reviewsAggregatePipeline : PipelineStage[] = [
-            { $match: { book: new mongoose.Types.ObjectId(bookId) } },
+            { $match: { book: bookId } },
             {
                 $lookup: {
                     from: "users",

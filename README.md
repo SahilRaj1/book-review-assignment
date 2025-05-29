@@ -13,7 +13,7 @@
 | `updatedAt`    | Date   | Timestamp when the user was last updated |
 
 * 🔒 Passwords are hashed before saving. JWT is used for authentication.
-* 👤 `User` is referenced in books and reviews for ownership and authorship.
+* 👤 `User` is referenced in books and reviews for ownership.
 
 ---
 
@@ -107,17 +107,33 @@ http://localhost:5000/api/v1
 
 ## 📚 API Endpoints
 
+### 🔐 **API health check**
+
+| Method | Endpoint           | Description                        | Auth Required |
+| ------ | ------------------ | ---------------------------------- | ------------- |
+| GET    | `/api/v1`          | Swagger Documentationof API          | ❌             |
+
+---
+
+### 🔐 **API health check**
+
+| Method | Endpoint           | Description                        | Auth Required |
+| ------ | ------------------ | ---------------------------------- | ------------- |
+| GET    | `/api/v1/health-check` | Health check endpoint          | ❌             |
+
+---
+
 ### 🔐 **Auth & User**
 
 | Method | Endpoint           | Description                        | Auth Required |
 | ------ | ------------------ | ---------------------------------- | ------------- |
-| POST   | `/api/v1/register` | Register a new user                | ❌             |
-| POST   | `/api/v1/login`    | Login and receive tokens           | ❌             |
-| POST   | `/api/v1/logout`   | Logout user and clear tokens       | ✅             |
-| GET    | `/api/v1/me`       | Get current logged-in user info    | ✅             |
-| POST   | `/api/v1/refresh`  | Refresh access token using refresh | ❌             |
-| PUT    | `/api/v1/update`   | Update user details                | ✅             |
-| PUT    | `/api/v1/password` | Change current password            | ✅             |
+| POST   | `/api/v1/user/signup` | Register a new user                | ❌             |
+| POST   | `/api/v1/user/login`    | Login and receive tokens           | ❌             |
+| POST   | `/api/v1/user/logout`   | Logout user and clear tokens       | ✅             |
+| GET    | `/api/v1/user/me`       | Get current logged-in user info    | ✅             |
+| POST   | `/api/v1/user/refresh`  | Refresh access token using refresh | ❌             |
+| PUT    | `/api/v1/user/update`   | Update user details                | ✅             |
+| PUT    | `/api/v1/user/password` | Change current password            | ✅             |
 
 ---
 
@@ -141,5 +157,24 @@ http://localhost:5000/api/v1
 | POST   | `/api/v1/books/:id/reviews` | Add a review to a book (1 per user per book) | ✅             |
 | PUT    | `/api/v1/reviews/:id`       | Update your review                           | ✅             |
 | DELETE | `/api/v1/reviews/:id`       | Delete your review                           | ✅             |
+
+---
+
+## 📬 Postman Collection
+
+A Postman collection is included in the root directory of this project:
+
+```
+📁 postman_collection.json
+```
+
+This file contains all the API endpoints with pre-configured request bodies, headers, and authentication where needed.
+
+### ✅ How to Use:
+
+1. Open [Postman](https://www.postman.com/).
+2. Click on **Import**.
+3. Choose the `postman_collection.json` file from the project root.
+4. Start testing the APIs directly — all routes and methods are already set up for convenience.
 
 ---

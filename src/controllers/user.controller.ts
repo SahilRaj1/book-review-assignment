@@ -50,6 +50,7 @@ export const registerUser = asyncHandler(
         const user = await User.create({
             email,
             password,
+            fullName,
             username: username.toLowerCase(),
         });
 

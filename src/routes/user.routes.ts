@@ -14,10 +14,10 @@ const router = Router();
 
 /* public routes */
 
-router.route("/register").post(registerUser);
+router.route("/signup").post(registerUser);
 router.route("/login").post(loginUser);
 
-/* secured routes */
+/* secured routes (additional) */
 
 router.route("/logout").post(validateToken, logoutUser);
 router.route("/refresh-token").post(refreshAccessToken);
