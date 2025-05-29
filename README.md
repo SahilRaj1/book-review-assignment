@@ -61,10 +61,6 @@
 
 ---
 
-Sure! Here's a clean and well-formatted **Project Setup Instructions** and **How to Run Locally** section for your `README.md`:
-
----
-
 ## ⚙️ Project Setup Instructions
 
 ### 1. **Clone the repository**
