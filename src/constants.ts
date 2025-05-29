@@ -1,7 +1,7 @@
-export const DB_NAME = "videotube";
+export const DB_NAME = "bookreviews";
 export const BASE_URL = "/api/v1";
 export const cookieOptions = {
     httpOnly: true,
     secure: true,
 };
-export const userDontInclude = "-password -refreshToken -avatarPublicId -coverImagePublicId";
+export const userDontInclude = "-password -refreshToken";

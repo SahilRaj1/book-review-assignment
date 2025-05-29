@@ -3,14 +3,6 @@ import mongooseAggregatePaginate from "mongoose-aggregate-paginate-v2";
 
 const bookSchema = new Schema(
     {
-        bookCoverUrl: {
-            type: String, // cloudinary url
-            required: true,
-        },
-        bookCoverPublicId: {
-            type: String, // cloudinary public ID
-            required: true,
-        },
         title: {
             type: String,
             required: [true, "Title is required"],

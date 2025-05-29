@@ -26,14 +26,6 @@ const userSchema = new Schema(
             trim: true,
             index: true,
         },
-        avatarUrl: {
-            type: String, // cloudinary url
-            required: true,
-        },
-        avatarPublicId: {
-            type: String, // cloudinary public ID
-            required: true,
-        },
         password: {
             type: String,
             required: [true, "Password is required"],
