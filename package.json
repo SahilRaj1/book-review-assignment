@@ -1,0 +1,52 @@
+{
+  "name": "book-review-assignment",
+  "version": "1.0.0",
+  "description": "Basic book review system REST API",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/src/index.js",
+    "dev": "nodemon src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SahilRaj1/book-review-assignment.git"
+  },
+  "keywords": [
+    "books",
+    "reviews",
+    "assignment",
+    "Billeasy"
+  ],
+  "author": "Sahil Raj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SahilRaj1/book-review-assignment/issues"
+  },
+  "homepage": "https://github.com/SahilRaj1/book-review-assignment#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.15.1",
+    "mongoose-aggregate-paginate-v2": "^1.1.4"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/mongoose": "^5.11.96",
+    "@types/mongoose-aggregate-paginate-v2": "^1.0.12",
+    "@types/node": "^22.15.24",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.5.3",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
+}
