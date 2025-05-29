@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { DB_NAME } from "../constants";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -12,7 +11,7 @@ const connectDB = async () => {
             options
         );
         console.log(
-            "MongoDB connected\nDB HOST : ",
+            "MongoDB connected...\nDB HOST : ",
             (await connectionInstance).connection.host
         );
     } catch (error) {
